@@ -1,1 +1,17 @@
 Descriptions of Datasets
+
+
+processed_data_229_p01_k100_D2T2_PD2H32.mat
+* Random k=100 features chosen out of non-zero features
+* D2_T2(class y = 1) and PD2_H32 data(class y = 0) 
+* Person 001
+
+processed_data_229_p01p02_k100_D2T2_PD2H32.mat
+* Random k=100 features chosen out of non-zero features
+* D2_T2(class y = 1) and PD2_H32 data(class y = 0)
+* Person 001 and Person 002
+
+processed_data_229_p01p02_k100_D2T2_PD2H32.mat
+* Random k=50 features chosen out of non-zero features
+* D2_T2(class y = 1) and PD2_H32 data(class y = 0) 
+* Person 001 and Person 002
