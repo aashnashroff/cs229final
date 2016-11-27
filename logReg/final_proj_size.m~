@@ -1,5 +1,4 @@
-% http://eric-yuan.me/logistic-regression/
-
+% 
 %pre-processing to separate test and train
 %use trials 1->150 for both types
 XTrain1 = X(1:150,:);
@@ -11,165 +10,26 @@ yTrain2 = y(1,190:339);
 yTest1 = y(1,151:189);
 yTest2 = y(1,340:end);
 
-XTrain = cat(XTrain1,XTrain2);
-XTest = cat(XTest1,XTest2);
-yTrain = cat(yTrain1,yTrain2);
-yTest = cat(yTest1,yTest2);
+XTrain = cat(1,XTrain1,XTrain2);
+XTest = cat(1,XTest1,XTest2);
+yTrain = cat(2, yTrain1,yTrain2);
+yTest = cat(2, yTest1,yTest2);
 
 perm = randperm(size(XTrain,1));
-X = X(perm, :);
-y = y';
-y = y(perm, :);
+XTrain = XTrain(perm, :);
+yTrain = yTrain';
+yTrain = yTrain(perm, :);
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     logisticRegressionWeights.m
-%     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [w] = logisticRegressionWeights( XTrain, yTrain, w0, maxIter, learningRate)
-
-    [nSamples, nFeature] = size(XTrain);
-    w = w0;
-    precost = 0;
-    for j = 1:maxIter
-        temp = zeros(nFeature + 1,1);
-        for k = 1:nSamples
-            temp = temp + (sigmoid([1.0 XTrain(k,:)] * w) - yTrain(k)) * [1.0 XTrain(k,:)]';
-        end
-        w = w - learningRate * temp;
-        cost = CostFunc(XTrain, yTrain, w);
-        if j~=0 && abs(cost - precost) / cost <= 0.0001
-            break;
-        end
-        precost = cost;
-    end
-
-end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     logisticRegressionClassify.m
-%     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [ res ] = logisticRegressionClassify( XTest, w )
-
-    nTest = size(XTest,1);
-    res = zeros(nTest,1);
-    for i = 1:nTest
-        sigm = sigmoid([1.0 XTest(i,:)] * w);
-        if sigm >= 0.5
-            res(i) = 1;
-        else
-            res(i) = 0;
-        end
-    end
-
-end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     sigmoid.m
-%     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [ output ] = sigmoid( input )
-
-    %output = tanh(input);
-    output = 1 / (1 + exp(- input));
-
-end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     CostFunc.m
-%     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [ J ] = CostFunc( XTrain, yTrain, w )
-
-    [nSamples, nFeature] = size(XTrain);
-    temp = 0.0;
-    for m = 1:nSamples
-        hx = sigmoid([1.0 XTrain(m,:)] * w);
-        if yTrain(m) == 1
-            temp = temp + log(hx);
-        else
-            temp = temp + log(1 - hx);
-        end
-    end
-    J = temp / (-nSamples);
-
-end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     main.m
-%     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-clear all; close all; clc;
-% 
-load('XTrainWBC.mat');
-load('yTrainWBC.mat');
-load('XTestWBC.mat');
-load('yTestWBC.mat');
+maxIter = 100; %100000
+learningRate = 0.1;
 % 
 
-[nsamples, nfeatures] = size(XTrain)
+[nsamples, nfeatures] = size(XTrain);
 w0 = rand(nfeatures + 1, 1);
-weight = logisticRegressionWeights( XTrain, yTrain, w0, 100000, 0.1);
+weight = logisticRegressionWeights( XTrain, yTrain, w0, maxIter, learningRate);
 res = logisticRegressionClassify( XTest, weight );
 
-errors = abs(yTest - res);
+errors = abs(yTest' - res);
 err = sum(errors)
 percentage = 1 - err / size(XTest, 1)
 
-
-
-
-
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% my_logisticRegression.m
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-function [theta] = logisticRegresstion(XTrain, yTrain, maxIter, alpha)
-    [nSamples, nFeatures] = size(XTrain);
-    for j = 1:maxIter
-        for k = 1:nSamples
-        end
-    end 
-end
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% costFunc
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [J] = costFunc(XTrain, YTrain, theta)
-    [nSamples, nFeatures] = size(XTrain);
-    temp = 0.0;
-    for m = 1:nSamples
-        hx = sigmoid([1.0 XTrain(m, :)] * theta);
-        if YTrain(m) == 1
-            temp = temp + log(hx);
-        else
-            temp = emp + log(1-hx);
-        end
-    end
-    J = temp/(-nSamples);
-end
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% sigmoid
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [output] = sigmoid(input)
-    output = 1/(1+exp(-input))
-end
