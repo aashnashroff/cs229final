@@ -1,5 +1,6 @@
 # cs229final
 CS 229 Final Project: Predicting Imagined Meters in Musical Patterns from MEG Data
+
 Authors: Aashna Shroff, Ben Limonchik, Zoe Robert
 
 Abstract:
