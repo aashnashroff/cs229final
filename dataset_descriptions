@@ -1,17 +1,28 @@
 Descriptions of Datasets
 
 
+processed_data_229_p01_kinf_D2T2_PD2H32.mat
+* 1.1 GB - located in Google Drive
+* only used non-zero features
+* D2_T2(class y = 1) and PD2_H32 data(class y = 0) 
+* Person 001
+
 processed_data_229_p01_k100_D2T2_PD2H32.mat
+* 22.7 MB
 * Random k=100 features chosen out of non-zero features
 * D2_T2(class y = 1) and PD2_H32 data(class y = 0) 
 * Person 001
 
 processed_data_229_p01p02_k100_D2T2_PD2H32.mat
+* 45.4 MB - located in Google Drive 
 * Random k=100 features chosen out of non-zero features
 * D2_T2(class y = 1) and PD2_H32 data(class y = 0)
 * Person 001 and Person 002
 
-processed_data_229_p01p02_k100_D2T2_PD2H32.mat
+processed_data_229_p01p02_k50_D2T2_PD2H32.mat
+* 22.3 MB
 * Random k=50 features chosen out of non-zero features
 * D2_T2(class y = 1) and PD2_H32 data(class y = 0) 
 * Person 001 and Person 002
+
+
