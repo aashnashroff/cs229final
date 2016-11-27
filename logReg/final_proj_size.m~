@@ -1,19 +1,61 @@
+% % FOR 1 PERSON (processed_data_229_p01_k100_D2T2_PD2H32.mat)
+% %pre-processing to separate test and train
+% %use trials 1->150 for both types
+% XTrain1 = X(1:150,:);
+% XTrain2 = X(190:339,:);
+% XTest1 = X(151:189,:);
+% XTest2 = X(340:end,:);
+% yTrain1 = y(1,1:150);
+% yTrain2 = y(1,190:339);
+% yTest1 = y(1,151:189);
+% yTest2 = y(1,340:end);
 % 
+% XTrain = cat(1,XTrain1,XTrain2);
+% XTest = cat(1,XTest1,XTest2);
+% yTrain = cat(2, yTrain1,yTrain2);
+% yTest = cat(2, yTest1,yTest2);
+
+
+% FOR PERSON 1 & 2 (processed_data_229_p01p02_k100_D2T2_PD2H32.mat)
 %pre-processing to separate test and train
 %use trials 1->150 for both types
+X = X_both;
+y = y_both;
+
 XTrain1 = X(1:150,:);
 XTrain2 = X(190:339,:);
 XTest1 = X(151:189,:);
-XTest2 = X(340:end,:);
+XTest2 = X(340:378,:);
 yTrain1 = y(1,1:150);
 yTrain2 = y(1,190:339);
 yTest1 = y(1,151:189);
-yTest2 = y(1,340:end);
+yTest2 = y(1,340:378);
 
 XTrain = cat(1,XTrain1,XTrain2);
 XTest = cat(1,XTest1,XTest2);
 yTrain = cat(2, yTrain1,yTrain2);
 yTest = cat(2, yTest1,yTest2);
+
+XTrain1_ = X(1+378:150+378,:);
+XTrain2_ = X(190+378:339+378,:);
+XTest1_ = X(151+378:189+378,:);
+XTest2_ = X(340+378:378+378,:);
+yTrain1_ = y(1,1+378:150+378);
+yTrain2_ = y(1,190+378:339+378);
+yTest1_ = y(1,151+378:189+378);
+yTest2_ = y(1,340+378:378+378);
+
+XTrain_ = cat(1,XTrain1_,XTrain2_);
+XTest_ = cat(1,XTest1_,XTest2_);
+yTrain_ = cat(2, yTrain1_,yTrain2_);
+yTest_ = cat(2, yTest1_,yTest2_);
+
+
+XTrain = cat(1,XTrain,XTrain_);
+XTest = cat(1,XTest,XTest_);
+yTrain = cat(2, yTrain,yTrain_);
+yTest = cat(2, yTest,yTest_);
+%======
 
 perm = randperm(size(XTrain,1));
 XTrain = XTrain(perm, :);
