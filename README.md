@@ -1,5 +1,6 @@
 # cs229final
-CS 229 Final Project 
+CS 229 Final Project: Predicting Imagined Meters in Musical Patterns from MEG Data
+Authors: Aashna Shroff, Ben Limonchik, Zoe Robert
 
 Abstract:
   Musical data is often interpreted within a metrical framework that integrates hierarchical timing information. It has been shown previously that listening to metronomes and imagining different meters such as march, waltz and hemiola (described below) modulated the resulting auditory evoked responses in the temporal lobe and motor- related brain areas such as the motor cortex, basal ganglia, and cerebellum.
