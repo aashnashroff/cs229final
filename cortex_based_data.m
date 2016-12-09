@@ -51,7 +51,8 @@ people = {'001','002','003','004','005','006','007','008','009','010','011','012
 X_total = zeros(1,5616);
 
 %loop over all people
-file = 'PU3_H32_';
+file = 'D2_T2_';
+file
 for p=1:10
     p
     file_ = char(strcat(file,people(p),'.mat'));
@@ -77,8 +78,9 @@ for p=1:10
         for elem_indx=1:length(indx)
             % compare to the indx non_zero_features that is 5k in size
             if ismember(indx(elem_indx,1), non_zero_features)
+                
                 %TODO get the mapped index (indx in 12k to indx in 5k)
-                mapped_indx = find(ismember(indx(elem_indx,1), non_zero_features));
+                mapped_indx = find(ismember(non_zero_features, indx(elem_indx,1)));
                 % if this is a nonzero index then add all of its time intervals
                 % and all of its trials to the average 
                 for j=0:77
@@ -95,4 +97,4 @@ for p=1:10
 end
 
 X_total = X_total(2:end,:);
-save('PU3_H32_cortex_10','X_total');
+save('D2_T2_cortex_10','X_total');
