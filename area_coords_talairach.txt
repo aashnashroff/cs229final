@@ -1,0 +1,73 @@
+ x [R->L]	y [P->A]	y [A->P]	z [I->S]	Region	Hemisphere		
+ 0	32	-32	24	CCA	MIDLINE	CCA 	Anterior cingulate cortex	
+ 0	-32	32	24	CCP	MIDLINE	CCP 	Posterior cingulate cortex	
+ 0	-48	48	12	CCR	MIDLINE	CCR 	Retrosplenial cingulate cortex	
+ 0	16	-16	-8	CCS	MIDLINE	CCS 	Subgenual cingulate cortex		
+ 40	-14	14	4	A1	LEFT	A1 	Primary auditory	
+ 60	-14	14	4	A2	LEFT	A2 	Secondary auditory	
+ 36	8	-8	56	FEF	LEFT	FEF 	Frontal eye field
+ 36	16	-16	-4	IA	LEFT	IA 	Anterior insula
+ 36	-8	8	-4	IP	LEFT	IP 	Posterior insula
+ 24	-24	24	56	M1	LEFT	M1 	Primary motor cortex
+ 44	-48	48	20	PCI	LEFT	PCI 	Inferior parietal cortex
+ 44	-64	64	28	PCIP	LEFT	PCIP	Intraparietal sulcus cortex
+ 8	-64	64	54	PCM	LEFT	PCM 	Medial parietal cortex
+ 28	-56	56	54	PCS	LEFT	PCS 	Superior parietal cortex
+ 48	32	-32	12	PFCCL	LEFT	PFCCL 	Centrolateral prefrontal cortex
+ 48	36	-36	32	PFCDL	LEFT	PFCDL 	Dorsolateral prefrontal cortex
+ 8	36	-36	40	PFCDM	LEFT	PFCDM 	Dorsomedial prefrontal cortex
+ 8	48	-48	20	PFCM	LEFT	PFCM 	Medial prefrontal cortex
+ 24	44	-44	-20	PFCORB	LEFT	PFCORB 	Orbital prefrontal cortex
+ 24	64	-64	4	PFCPOL	LEFT	PFCPOL 	Prefrontal polar cortex
+ 48	32	-32	-8	PFCVL	LEFT	PFCVL 	Ventrolateral prefrontal cortex
+ 28	-16	16	-16	PHC	LEFT	PHC 	Parahippocampal cortex
+ 28	0	0	60	PMCDL	LEFT	PMCDL 	Dorsolateral premotor cortex
+ 4	0	0	60	PMCM	LEFT	PMCM 	Medial (supplementary) premotor cortex
+ 44	4	-4	24	PMCVL	LEFT	PMCVL 	Ventrolateral premotor cortex		
+ 16	-28	28	4	Pulvinar	LEFT	Pulvinar Pulvinar
+ 40	-28	28	64	S1	LEFT	S1 	Primary somatosensory cortex
+ 56	-16	16	16	S2	LEFT	S2 	Secondary somatosensory cortex
+ 64	-24	24	-12	TCC	LEFT	TCC 	Central temporal cortex
+ 64	-24	24	-24	TCI	LEFT	TCI 	Inferior temporal cortex
+ 52	12	-12	-28	TCPOL	LEFT	TCPOL 	Polar temporal cortex
+ 52	-4	4	-8	TCS	LEFT	TCS 	Superior temporal cortex
+ 32	-28	28	-28	TCV	LEFT	TCV 	Ventral temporal cortex		
+ 8	-8	8	4	ThalAM	LEFT	ThalAM 	Anteromedial thalamus
+ 4	-84	84	-4	V1	LEFT	V1 	Primary visual cortex	
+ 4	-96	96	8	V2	LEFT	V2 	Secondary visual cortex		
+ 20	-88	88	20	VACD	LEFT	VACD 	Dorsal anterior visual cortex	
+ 20	-84	84	-12	VACV	LEFT	VACV 	Ventral anterior visual cortex		
+ -40	-14	14	4	A1	RIGHT	A1 	Primary auditory	                 	
+ -60	-14	14	4	A2	RIGHT	A2 	Secondary auditory	               	
+ -36	8	-8	56	FEF	RIGHT	FEF 	Frontal eye field                        	
+ -36	16	-16	-4	IA	RIGHT	IA 	Anterior insula                           	
+ -36	-8	8	-4	IP	RIGHT	IP 	Posterior insula                          	
+ -24	-24	24	56	M1	RIGHT	M1 	Primary motor cortex                      	
+ -44	-48	48	20	PCI	RIGHT	PCI 	Inferior parietal cortex                 	
+ -44	-64	64	28	PCIP	RIGHT	PCIP	Intraparietal sulcus cortex              	
+ -8	-64	64	54	PCM	RIGHT	PCM 	Medial parietal cortex                   	
+ -28	-56	56	54	PCS	RIGHT	PCS 	Superior parietal cortex                 	
+ -48	32	-32	12	PFCCL	RIGHT	PFCCL 	Centrolateral prefrontal cortex        	
+ -48	36	-36	32	PFCDL	RIGHT	PFCDL 	Dorsolateral prefrontal cortex         	
+ -8	36	-36	40	PFCDM	RIGHT	PFCDM 	Dorsomedial prefrontal cortex          	
+ -8	48	-48	20	PFCM	RIGHT	PFCM 	Medial prefrontal cortex                	
+ -24	44	-44	-20	PFCORB	RIGHT	PFCORB 	Orbital prefrontal cortex             	
+ -24	64	-64	4	PFCPOL	RIGHT	PFCPOL 	Prefrontal polar cortex               	
+ -48	32	-32	-8	PFCVL	RIGHT	PFCVL 	Ventrolateral prefrontal cortex        	
+ -28	-16	16	-16	PHC	RIGHT	PHC 	Parahippocampal cortex                   	
+ -28	0	0	60	PMCDL	RIGHT	PMCDL 	Dorsolateral premotor cortex           	
+ -4	0	0	60	PMCM	RIGHT	PMCM 	Medial (supplementary) premotor cortex  	
+ -44	4	-4	24	PMCVL	RIGHT	PMCVL 	Ventrolateral premotor cortex			
+ -16	-28	28	4	Pulvinar	RIGHT	Pulvinar Pulvinar                                     	
+ -40	-28	28	64	S1	RIGHT	S1 	Primary somatosensory cortex              	
+ -56	-16	16	16	S2	RIGHT	S2 	Secondary somatosensory cortex            	
+ -64	-24	24	-12	TCC	RIGHT	TCC 	Central temporal cortex                  	
+ -64	-24	24	-24	TCI	RIGHT	TCI 	Inferior temporal cortex                 	
+ -52	12	-12	-28	TCPOL	RIGHT	TCPOL 	Polar temporal cortex                  	
+ -52	-4	4	-8	TCS	RIGHT	TCS 	Superior temporal cortex                 	
+ -32	-28	28	-28	TCV	RIGHT	TCV 	Ventral temporal cortex			
+ -8	-8	8	4	ThalAM	RIGHT	ThalAM 	Anteromedial thalamus                 	
+ -4	-84	84	-4	V1	RIGHT	V1 	Primary visual cortex	            	
+ -4	-96	96	8	V2	RIGHT	V2 	Secondary visual cortex		 	
+ -20	-88	88	20	VACD	RIGHT	VACD 	Dorsal anterior visual cortex	  	
+ -20	-84	84	-12	VACV	RIGHT	VACV 	Ventral anterior visual cortex			
